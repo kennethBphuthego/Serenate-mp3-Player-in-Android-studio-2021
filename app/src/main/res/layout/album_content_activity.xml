@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/album_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    tools:context=".AlbumContent">
+
+
+     <ImageView
+       android:layout_width="160dp"
+       android:layout_height="180dp"
+       android:id="@+id/albumPicture"
+       android:src="@drawable/default_cover"
+       android:scaleType="centerCrop"
+         tools:ignore="ContentDescription" />
+
+     <androidx.recyclerview.widget.RecyclerView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/album_songList3"
+       android:layout_below="@+id/albumPicture"/> 
+
+</RelativeLayout>
