@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
                        if(!album_duplicates.contains(Album)){
 
                                   albums_list2.add(musicFiles);
-                                  album_duplicates.add(album_list2);
+                                  album_duplicates.add(Album);
                                 }
 
                        }
