@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 public class AlbumContentAdapter extends RecyclerView.Adapter<AlbumContentAdapter.ViewHolderB>{
 
-     private Context context4;
+     private final Context context4;
      static  ArrayList<MusicFiles>albumFiles;
 
     public AlbumContentAdapter(Context context4, ArrayList<MusicFiles> albumFiles){
@@ -72,7 +72,7 @@ public class AlbumContentAdapter extends RecyclerView.Adapter<AlbumContentAdapte
            return albumFiles.size();
           }
 
-    public class ViewHolderB extends RecyclerView.ViewHolder{
+    public static class ViewHolderB extends RecyclerView.ViewHolder{
 
             ImageView album_image;
             TextView album_name;

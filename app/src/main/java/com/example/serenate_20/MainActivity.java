@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
   
   public static ArrayList<MusicFiles>getAllAudio(Context context){
   
-            ArrayList<MusicFiles> album_duplicates = new ArrayList<>();
+            ArrayList<String> album_duplicates = new ArrayList<>();
             ArrayList<MusicFiles> temporaryAudioList = new ArrayList<>();
             Uri uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
             String[] projection = {

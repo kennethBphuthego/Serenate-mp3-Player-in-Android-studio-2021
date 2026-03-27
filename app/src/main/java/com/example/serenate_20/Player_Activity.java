@@ -43,7 +43,7 @@ public class Player_Activity extends AppCompatActivity implements MediaPlayer.On
         static ArrayList<MusicFiles> ListOfSongs = new ArrayList<>();
         static Uri uri2;
         MediaPlayer mediaPlayer1;
-        private Handler handler1 = new Handler();
+        private final Handler handler1 = new Handler();
         private Thread playThread,previousThread,nextThread;
 
 
@@ -450,7 +450,7 @@ private void getIntentMethod(){
 
               position = getIntent().getIntExtra("position", -1);
        
-              String invoker = getIntent().getStringExtra("invoker", -1);
+              String invoker = getIntent().getStringExtra("invoker");
 
 
               if(invoker != null && invoker.equals("albumContent")){

@@ -2,6 +2,7 @@ package com.example.serenate_20;
 
 import static com.example.serenate_20.MainActivity.musicFiles;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -19,6 +20,7 @@ import android.view.ViewGroup;
 public class TrackFragment extends Fragment {
 
     RecyclerView recyclerView3;
+     @SuppressLint("StaticFieldLeak")
      static MusicAdapter musicAdapter3;
 
     public TrackFragment() {
