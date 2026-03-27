@@ -90,9 +90,8 @@ private byte[] getAlbumArt(String uri) {
 
         MediaMetadataRetriever retriever = new MediaMetadataRetriever();
         retriever.setDataSource(uri);
-        byte[] art= retriever.getEmbeddedPicture();
 
-        return art;
+    return retriever.getEmbeddedPicture();
       }
 
 }

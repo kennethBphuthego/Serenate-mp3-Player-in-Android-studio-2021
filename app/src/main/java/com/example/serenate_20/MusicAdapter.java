@@ -137,15 +137,14 @@ private void deleteTrack(int position, View v){
 
         MediaMetadataRetriever retriever = new MediaMetadataRetriever();
         retriever.setDataSource(uri);
-        byte[] art= retriever.getEmbeddedPicture();
 
-        return art;
+      return retriever.getEmbeddedPicture();
       }
 
  void listUpdate(ArrayList<MusicFiles>filesArray){
 
              musicFiles2 = new ArrayList<>();
              musicFiles2.addAll(filesArray); 
-             notifyDataSetChange();  
+             notifyDataSetChanged();
            }
 }

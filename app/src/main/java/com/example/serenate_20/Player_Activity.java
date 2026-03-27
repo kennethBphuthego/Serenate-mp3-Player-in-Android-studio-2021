@@ -44,10 +44,9 @@ public class Player_Activity extends AppCompatActivity implements MediaPlayer.On
         static Uri uri2;
         MediaPlayer mediaPlayer1;
         private final Handler handler1 = new Handler();
-        private Thread playThread,previousThread,nextThread;
 
 
-     @Override
+    @Override
      protected void onCreate(Bundle savedInstanceState) {
          super.onCreate(savedInstanceState);
          EdgeToEdge.enable(this);
@@ -144,16 +143,16 @@ protected void onResume(){
 }
 
 private void playThread(){
-                  
-                 playThread = new Thread(){
-                             
-                          @Override
-                          public void run(){
-                              super.run();
 
-                               Play_Pause_Button.setOnClickListener(v -> Play_Pause_ButtonClicked());
-                                 }
-                           };
+    Thread playThread = new Thread() {
+
+        @Override
+        public void run() {
+            super.run();
+
+            Play_Pause_Button.setOnClickListener(v -> Play_Pause_ButtonClicked());
+        }
+    };
                           playThread.start();
                     
 }
@@ -207,15 +206,15 @@ private void Play_Pause_ButtonClicked(){
 
 private void previousThread(){
 
-           previousThread = new Thread(){
-                             
-                          @Override
-                          public void run(){
-                              super.run();
+    Thread previousThread = new Thread() {
 
-                               Previous_btn.setOnClickListener(v -> Previous_btnClicked());
-                                 }
-                           };
+        @Override
+        public void run() {
+            super.run();
+
+            Previous_btn.setOnClickListener(v -> Previous_btnClicked());
+        }
+    };
                           previousThread.start();
 
 }
@@ -314,15 +313,15 @@ private void  Previous_btnClicked(){
 
 private void nextThread(){
 
-     nextThread = new Thread(){
-                             
-                          @Override
-                          public void run(){
-                              super.run();
+    Thread nextThread = new Thread() {
 
-                               Next_btn.setOnClickListener(v -> Next_btnClicked());
-                                 }
-                           };
+        @Override
+        public void run() {
+            super.run();
+
+            Next_btn.setOnClickListener(v -> Next_btnClicked());
+        }
+    };
                           nextThread.start();
 
 }
@@ -471,17 +470,11 @@ private void getIntentMethod(){
 
                    mediaPlayer1.stop();
                    mediaPlayer1.release();
-                   mediaPlayer1 = MediaPlayer.create(getApplicationContext(), uri2);
-                   mediaPlayer1.start();
-                 }
-                 else
-                 {
+                }
+    mediaPlayer1 = MediaPlayer.create(getApplicationContext(), uri2);
+    mediaPlayer1.start();
 
-                     mediaPlayer1 = MediaPlayer.create(getApplicationContext(), uri2);
-                     mediaPlayer1.start();
-                 }
-
-                  SeekBar.setMax(mediaPlayer1.getDuration() / 1000);
+    SeekBar.setMax(mediaPlayer1.getDuration() / 1000);
                   metaData(uri2);
 
  }
