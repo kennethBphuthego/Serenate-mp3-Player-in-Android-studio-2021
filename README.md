@@ -2,6 +2,6 @@
 -Serenate Mp3 Player
 
 #Tech Stack
-Language-Java,Kotlin
+Language-Java,xml,Kotlin
 Framework-Android
 Tools-Android Studio,Gradle
